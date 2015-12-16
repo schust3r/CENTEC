@@ -1,0 +1,347 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{2653DA6B-76B5-4A55-ADCC-7BB26914EF4C}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Presentacion</RootNamespace>
+    <AssemblyName>Presentacion</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>true</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>Presentacion.Program</StartupObject>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DocumentFormat.OpenXml, Version=2.5.5631.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\DocumentFormat.OpenXml.2.5\lib\DocumentFormat.OpenXml.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DGVPrinter.cs" />
+    <Compile Include="Forms\Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modulos\Configuracion\cBitacora\ControlBitacora.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modulos\Configuracion\cBitacora\ControlBitacora.Designer.cs">
+      <DependentUpon>ControlBitacora.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modulos\Configuracion\ControlConfiguracion.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modulos\Configuracion\ControlConfiguracion.Designer.cs">
+      <DependentUpon>ControlConfiguracion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modulos\Configuracion\cPerfil\ControlPerfil.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modulos\Configuracion\cPerfil\ControlPerfil.Designer.cs">
+      <DependentUpon>ControlPerfil.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modulos\Configuracion\cPerfil\PerfilVerDetalles.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modulos\Configuracion\cPerfil\PerfilVerDetalles.Designer.cs">
+      <DependentUpon>PerfilVerDetalles.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modulos\Configuracion\cPerfil\RegistrarPerfil.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modulos\Configuracion\cPerfil\.Designer.cs">
+      <DependentUpon>RegistrarPerfil.cs</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modulos\Configuracion\cUsuario\ControlUsuario.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modulos\Configuracion\cUsuario\ControlUsuario.Designer.cs">
+      <DependentUpon>ControlUsuario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modulos\Configuracion\cUsuario\RegistrarUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modulos\Configuracion\cUsuario\RegistrarUsuario.Designer.cs">
+      <DependentUpon>RegistrarUsuario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modulos\Configuracion\cUsuario\UsuarioVerDetalles.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modulos\Configuracion\cUsuario\UsuarioVerDetalles.Designer.cs">
+      <DependentUpon>UsuarioVerDetalles.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modulos\ControlInicio.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modulos\ControlInicio.Designer.cs">
+      <DependentUpon>ControlInicio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modulos\Matricula\cCursos\ControlCursos.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modulos\Matricula\cCursos\ControlCursos.Designer.cs">
+      <DependentUpon>ControlCursos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modulos\Matricula\cCursos\CursoVerDetalles.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modulos\Matricula\cCursos\CursoVerDetalles.Designer.cs">
+      <DependentUpon>CursoVerDetalles.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modulos\Matricula\cCursos\RegistrarCurso.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modulos\Matricula\cCursos\RegistrarCurso.Designer.cs">
+      <DependentUpon>RegistrarCurso.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modulos\Matricula\CambiarEstado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modulos\Matricula\CambiarEstado.Designer.cs">
+      <DependentUpon>CambiarEstado.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modulos\Matricula\cMatricula\ControlMatriculaPres1.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modulos\Matricula\cMatricula\ControlMatriculaPres1.Designer.cs">
+      <DependentUpon>ControlMatriculaPres1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modulos\Matricula\cMatricula\ControlMatriculaPres2.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modulos\Matricula\cMatricula\ControlMatriculaPres2.Designer.cs">
+      <DependentUpon>ControlMatriculaPres2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modulos\Matricula\cMatricula\EditarParticipante.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modulos\Matricula\cMatricula\EditarParticipante.Designer.cs">
+      <DependentUpon>EditarParticipante.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modulos\Matricula\cOferta\ControlOferta.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modulos\Matricula\cOferta\ControlOferta.Designer.cs">
+      <DependentUpon>ControlOferta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modulos\Matricula\cOferta\RegistrarOferta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modulos\Matricula\cOferta\RegistrarOferta.Designer.cs">
+      <DependentUpon>RegistrarOferta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modulos\Matricula\cOferta\VerDetallesOferta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modulos\Matricula\cOferta\VerDetallesOferta.Designer.cs">
+      <DependentUpon>VerDetallesOferta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modulos\Matricula\ControlMatricula.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modulos\Matricula\ControlMatricula.Designer.cs">
+      <DependentUpon>ControlMatricula.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modulos\Matricula\cParticipantes\Comprobante.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modulos\Matricula\cParticipantes\Comprobante.Designer.cs">
+      <DependentUpon>Comprobante.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modulos\Matricula\cParticipantes\ControlParticipantes.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modulos\Matricula\cParticipantes\ControlParticipantes.Designer.cs">
+      <DependentUpon>ControlParticipantes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RoundButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <EmbeddedResource Include="Forms\Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modulos\Configuracion\cBitacora\ControlBitacora.resx">
+      <DependentUpon>ControlBitacora.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modulos\Configuracion\ControlConfiguracion.resx">
+      <DependentUpon>ControlConfiguracion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modulos\Configuracion\cPerfil\ControlPerfil.resx">
+      <DependentUpon>ControlPerfil.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modulos\Configuracion\cPerfil\PerfilVerDetalles.resx">
+      <DependentUpon>PerfilVerDetalles.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modulos\Configuracion\cPerfil\RegistrarPerfil.es-419.resx">
+      <DependentUpon>RegistrarPerfil.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modulos\Configuracion\cPerfil\RegistrarPerfil.es-MX.resx">
+      <DependentUpon>RegistrarPerfil.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modulos\Configuracion\cPerfil\RegistrarPerfil.nqo.resx">
+      <DependentUpon>RegistrarPerfil.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modulos\Configuracion\cPerfil\RegistrarPerfil.resx">
+      <DependentUpon>RegistrarPerfil.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modulos\Configuracion\cUsuario\ControlUsuario.resx">
+      <DependentUpon>ControlUsuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modulos\Configuracion\cUsuario\RegistrarUsuario.resx">
+      <DependentUpon>RegistrarUsuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modulos\Configuracion\cUsuario\UsuarioVerDetalles.resx">
+      <DependentUpon>UsuarioVerDetalles.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modulos\ControlInicio.resx">
+      <DependentUpon>ControlInicio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modulos\Matricula\cCursos\ControlCursos.resx">
+      <DependentUpon>ControlCursos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modulos\Matricula\cCursos\CursoVerDetalles.resx">
+      <DependentUpon>CursoVerDetalles.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modulos\Matricula\cCursos\RegistrarCurso.resx">
+      <DependentUpon>RegistrarCurso.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modulos\Matricula\CambiarEstado.resx">
+      <DependentUpon>CambiarEstado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modulos\Matricula\cMatricula\ControlMatriculaPres1.resx">
+      <DependentUpon>ControlMatriculaPres1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modulos\Matricula\cMatricula\ControlMatriculaPres2.resx">
+      <DependentUpon>ControlMatriculaPres2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modulos\Matricula\cMatricula\EditarParticipante.resx">
+      <DependentUpon>EditarParticipante.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modulos\Matricula\cOferta\ControlOferta.resx">
+      <DependentUpon>ControlOferta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modulos\Matricula\cOferta\RegistrarOferta.resx">
+      <DependentUpon>RegistrarOferta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modulos\Matricula\cOferta\VerDetallesOferta.resx">
+      <DependentUpon>VerDetallesOferta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modulos\Matricula\ControlMatricula.resx">
+      <DependentUpon>ControlMatricula.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modulos\Matricula\cParticipantes\Comprobante.resx">
+      <DependentUpon>Comprobante.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modulos\Matricula\cParticipantes\ControlParticipantes.resx">
+      <DependentUpon>ControlParticipantes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ayuda.chm" />
+    <None Include="Resources\logoSmall.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bienvenida.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Entidades\Entidades.csproj">
+      <Project>{8a097311-ebb6-4ede-b2bb-46a5cbea26e5}</Project>
+      <Name>Entidades</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\LogicaNegocios\LogicaNegocios.csproj">
+      <Project>{6e8d3aae-4270-478d-a8aa-9d4b90b3ef1a}</Project>
+      <Name>LogicaNegocios</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\voz_5cont.wav" />
+    <None Include="Resources\voz_crash.wav" />
+    <None Include="Resources\voz_reserva.wav" />
+    <None Include="Resources\voz_salir.wav" />
+    <Resource Include="Resources\voz_bienv.wav" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
